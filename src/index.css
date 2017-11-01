@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  background-color: #fafafa;
+}
+
+a {
+  color: #3f51b5
+}
+
+.post-sheet {
+  max-width: 700px;
+  margin: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .post-sheet {
+    margin: 0 5vw;
+  }
+}
+
+.comments {
+  margin: 0 2vw;
+}
+
+.comment-sheet {
+  margin-top: 12px;
+}
+
+.no-posts {
+  text-align: center;
+}
+
+.secondary-nav {
+  margin-top: 24px;
+}
+
+
+
+
+
