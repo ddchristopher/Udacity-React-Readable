@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { getPostsByCategory, newPost, newComment, details, resetDetails } from '../actions/index'
-import { Redirect } from 'react-router-dom'
 import Button from 'material-ui/Button';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';

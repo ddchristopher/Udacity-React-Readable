@@ -95,16 +95,6 @@ const Readable = {
 			.then((res) => res.json())
 	},
 
-	endorse: function (id){
-		return fetch(`${this.ORIGIN}/posts/${id}`,
-			{
-				method: "POST",
-				headers: this.headers,
-				body: JSON.stringify({ option: "" })
-			})
-			.then((res) => res.json())
-	},
-
 	deletePost: function (id){
 		return fetch(`${this.ORIGIN}/posts/${id}`,
 			{

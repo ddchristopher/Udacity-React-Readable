@@ -138,10 +138,16 @@ class PostSheet extends Component {
 		})
 	};
 
+	checkIds = (array, id) => {
+		return array.some((element) => element.id === id)
+		}
+
     render() {
 
         const {
+        	posts,
         	post,
+	        id,
 	        classes,
 	        up,
 	        down,
@@ -157,7 +163,11 @@ class PostSheet extends Component {
 
         return (
             <div>
-	            {!post.id && <div></div>}
+	            {id && !this.checkIds(posts, id) &&
+	            <Typography type={'title'} className='not-found'>
+		            NO POST FOUND
+	            </Typography>
+	            }
 	            {post.title &&
 		            <div>
                 <Paper className={classes.root} elevation={5}>

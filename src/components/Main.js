@@ -51,22 +51,25 @@ class Main extends Component {
 
 	backButton = () => this.props.history.goBack();
 
+
 	render() {
 
 		const { posts, currentPost, categories } = this.props
+		const catPath = this.props.match.params.category
+		const idPath = this.props.match.params.id
 
 		return (
 			<div>
 				<Navigation
-					id={this.props.match.params.id && this.props.match.params.id}
-					category={this.props.match.params.category && this.props.match.params.category}
+					id={idPath && idPath}
+					category={catPath && catPath}
 					backButton={this.backButton}
 				/>
 				{/* If the path has a category but it is not in the categoryList, list view is empty */}
-				{this.props.match.params.category && !categories.includes(this.props.match.params.category) && <div></div>}
+				{catPath && !categories.includes(catPath) && <div></div>}
 				{/* When the path has no category (is at the root) or has a category included in the categoryList,
 				 renders the details view if the path has an id, and the list view if it does not */}
-				{(!this.props.match.params.category || categories.includes(this.props.match.params.category)) && !this.props.match.params.id && posts.map((post) => (
+				{(!catPath || categories.includes(catPath)) && !idPath && posts.map((post) => (
 					<div
 						className='post-sheet'
 						key={post.id}
@@ -77,13 +80,13 @@ class Main extends Component {
 						/>
 					</div>
 				))}
-				{this.props.match.params.category && categories.includes(this.props.match.params.category) && this.props.match.params.id &&
+				{catPath && categories.includes(catPath) && idPath &&
 				<div
 					className='post-sheet'
 				>
 					<PostSheet
 						post={currentPost}
-						id={this.props.match.params.id && this.props.match.params.id}
+						id={idPath && idPath}
 						className='post-sheet'
 					/>
 				</div>

@@ -4,7 +4,12 @@ Built using [create-react-app](https://github.com/facebookincubator/create-react
 
 ## Installation instructions
 
-1. Download, install, and run the [starter server repository](https://github.com/udacity/reactnd-project-readable-starter)
-2. Download or clone this repository
-3. Run `npm install`
-4. Run `npm start` to start the development server
+Starter server
+1. Download or clone the [starter server repository](https://github.com/udacity/reactnd-project-readable-starter)
+2. Run `npm install`
+3. Run `node server` to start the API server
+
+Frontend
+1. Download or clone this repository
+2. Run `npm install`
+3. Run `npm start` to start the development server and use the app

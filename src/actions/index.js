@@ -1,20 +1,22 @@
 
 import Readable from '../utils/api'
+import {
+	GET_CATEGORIES,
+	GET_POSTS,
+	GET_COMMENTS,
+	SORT_POSTS,
+	VOTE,
+	DELETE,
+	NEW_POST,
+	EDIT_POST,
+	DETAILS,
+	RESET_D,
+	NEW_COMMENT,
+	EDIT_COMMENT,
+	VOTE_C,
+	DELETE_C,
+} from '../actions/types'
 
-export const GET_CATEGORIES = 'GET_CATEGORIES'
-export const GET_POSTS = 'GET_POSTS'
-export const SORT_POSTS = 'SORT_POSTS'
-export const VOTE = 'VOTE'
-export const VOTE_C = 'VOTE_C'
-export const DELETE = 'DELETE'
-export const DELETE_C = 'DELETE_C'
-export const NEW_POST = 'NEW_POST'
-export const DETAILS = 'DETAILS'
-export const RESET_D = 'RESET_D'
-export const NEW_COMMENT = 'NEW_COMMENT'
-export const EDIT_POST = 'EDIT_POST'
-export const EDIT_COMMENT = 'EDIT_COMMENT'
-export const GET_COMMENTS = 'GET_COMMENTS'
 
 export function getCategories() {
 	return function (dispatch) {
